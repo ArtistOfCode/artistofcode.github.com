@@ -7,8 +7,8 @@ hero:
   text: "Blog & Documention"
   tagline: 码匠，编码的匠人，程序的艺术家。
   actions:
-    - text: 博客大纲
-      link: /outline/
+    - text: 开始
+      link: /start
     - theme: alt
       text: 关于我们
       link: /about
@@ -47,4 +47,3 @@ features:
     details: ID：码匠_CodeArtist
     link: https://my.oschina.net/u/4032606
 ---
-

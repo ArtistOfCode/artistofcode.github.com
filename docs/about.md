@@ -11,4 +11,3 @@
 
 # 反馈
 - [Github Issues](https://github.com/ArtistOfCode/artistofcode.github.com/issues)
-- [Gitee Issues](https://gitee.com/code_artist/code_artist/issues)
