@@ -18,7 +18,7 @@ AOP（Aspect Oriented Programming）面向切面编程的概念比较抽象，�
 
 使用 AOP 时，需要定义实现切面的类，在切面中指定切点和通知。
 
-![AOP](images/第11章-Spring中的AOP和动态代理/AOP.png)
+![AOP](/images/spring/第11章-Spring中的AOP和动态代理/AOP.png)
 
 一个目标类可以被多个切面切入，多个切面也可以切入一个目标类。
 
@@ -36,13 +36,13 @@ Spring AOP 提供了下面五种通知类型：
 
 AOP 的连接点一般是指目标类的方法，五种通知类型执行的节点如下：
 
-![Advice](images/第11章-Spring中的AOP和动态代理/Advice.png)
+![Advice](/images/spring/第11章-Spring中的AOP和动态代理/Advice.png)
 
 ## 二、动态代理
 
 Spring AOP 底层是基于动态代理实现的，对实现接口的类进行代理，默认使用 JDK 动态代理，对没实现接口的类，使用 CGLIB 动态代理。
 
-![动态代理](images/第11章-Spring中的AOP和动态代理/动态代理.png)
+![动态代理](/images/spring/第11章-Spring中的AOP和动态代理/动态代理.png)
 
 ### 1. JDK 动态代理
 

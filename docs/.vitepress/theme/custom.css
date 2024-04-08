@@ -1,0 +1,7 @@
+:root:not(.dark) img[src$="#light"] {
+  display: none;
+}
+
+:root:is(.dark) img[src$="#dark"] {
+  display: none;
+}

@@ -86,20 +86,20 @@ export default defineConfig({
     sidebar: {
       '/spring': [
         {
-          text: '基础核心技术', items: [
-            { text: '第1章-Spring模块与应用场景', link: '/spring/1' },
-            { text: '第2章-基于XML配置的容器', link: '/spring/2' },
-            { text: '第3章-基于注解配置的容器', link: '/spring/3' },
-            { text: '第4章-基于Java配置的容器', link: '/spring/4' },
-            { text: '第5章-三种配置方式的混合和迁移', link: '/spring/5' },
-            { text: '第6章-同类型多个Bean的注入', link: '/spring/6' },
-            { text: '第7章-环境抽象', link: '/spring/7' },
-            { text: '第8章-事件机制', link: '/spring/8' },
-            { text: '第9章-资源管理', link: '/spring/9' },
-            { text: '第10章-数据验证', link: '/spring/10' },
-            { text: '第11章-数据绑定', link: '/spring/11' },
-            { text: '第12章-类型转换', link: '/spring/12' },
-            { text: '第13章-SpEL表达式', link: '/spring/13' },
+          text: '基础核心技术', base: '/spring', items: [
+            { text: '1. Spring模块与应用场景', link: '/1' },
+            { text: '2. 基于XML配置的容器', link: '/2' },
+            { text: '3. 基于注解配置的容器', link: '/3' },
+            { text: '4. 基于Java配置的容器', link: '/4' },
+            { text: '5. 三种方式的混合和迁移', link: '/5' },
+            { text: '6. 同类型多个Bean的注入', link: '/6' },
+            { text: '7. 环境抽象', link: '/7' },
+            { text: '8. 事件机制', link: '/8' },
+            { text: '9. 资源管理', link: '/9' },
+            { text: '10. 数据验证', link: '/10' },
+            { text: '11. 数据绑定', link: '/11' },
+            { text: '12. 类型转换', link: '/12' },
+            { text: '13. SpEL表达式', link: '/13' },
           ]
         },
         { text: '面向切面编程', items: [] },

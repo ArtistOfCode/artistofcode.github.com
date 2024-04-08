@@ -24,7 +24,7 @@ AOP 中的通知是基于连接点（Join point）业务逻辑的一种增强，
 
 AOP 的连接点一般是指目标类的方法，五种通知类型执行的节点如下：
 
-![Advice](images/第14章-Spring AOP通知（Advice）详解/Advice.png)
+![Advice](/images/spring/第14章-Spring AOP通知（Advice）详解/Advice.png)
 
 ## 二、通知的定义
 
@@ -230,7 +230,7 @@ public class FirstAspect {
 
 优先级高的切面先执行，通知执行的顺序如下：
 
-![SpringAOP通知顺序](images/第14章-Spring AOP通知（Advice）详解/SpringAOP通知顺序.png)
+![SpringAOP通知顺序](/images/spring/第14章-Spring AOP通知（Advice）详解/SpringAOP通知顺序.png)
 
 可以得出：
 
@@ -241,7 +241,7 @@ public class FirstAspect {
 
 Spring AOP 是基于动态代理的拦截器模式实现的，切面模型与拦截器模型相似，如下：
 
-![SpringAOP通知顺序2](images/第14章-Spring AOP通知（Advice）详解/SpringAOP通知顺序2.png)
+![SpringAOP通知顺序2](/images/spring/第14章-Spring AOP通知（Advice）详解/SpringAOP通知顺序2.png)
 
 ## 五、附录
 

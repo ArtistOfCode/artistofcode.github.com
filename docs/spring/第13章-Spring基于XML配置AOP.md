@@ -73,7 +73,7 @@ Spring 基于 XML 配置 AOP 的方式不会侵入源码，但需要维护更多
 
 定义通知的时候需要指定切点，通知的类型决定了切入的节点。
 
-![Advice](images/第13章-Spring基于XML配置AOP/Advice.png)
+![Advice](/images/spring/第13章-Spring基于XML配置AOP/Advice.png)
 
 在切面里使用通知标签中的 `method` 属性来绑定方法。
 
