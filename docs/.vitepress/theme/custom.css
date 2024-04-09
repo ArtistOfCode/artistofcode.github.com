@@ -10,7 +10,7 @@ img[src$="#svg-dark"] {
   background-color: #eee;
   border-radius: 8px;
   padding: 1ch;
-  margin: 1ch 0;
+  margin: 1ch auto;
 }
 
 :root:is(.dark) img[src$="#svg-dark"] {
