@@ -1,8 +1,26 @@
 import { defineConfig } from 'vitepress'
 
 const part = ['基础篇', '框架篇', '架构篇', '运维篇', '前端篇', '测试篇', '工具篇', '业务篇', '管理篇', '中间件']
+const spring = [
+  { '基础核心技术': ['核心模块与应用场景', '基于XML配置的容器', '基于注解配置的容器', '基于Java配置的容器', '三种方式的混合和迁移', '同类型多个Bean的注入', 'Bean的生命周期和扩展点', '环境抽象', '事件机制', '资源管理', '数据验证', '数据绑定', '类型转换', 'SpEL表达式'] },
+  { '面向切面编程': [] },
+  { '数据访问和事务管理': [] },
+  { 'Web Servlet应用': [] },
+  { 'Web Reactive应用': [] },
+  { '单元测试和集成测试': [] },
+  { '其他组件': [] },
+]
 
-// https://vitepress.dev/reference/site-config
+function sideMenu(base, v) {
+  let i = 1
+  return v.map(p => {
+    const k = Object.keys(p)[0]
+    return {
+      text: k, base, items: p[k].map(s => { return { text: `${i}. ${s}`, link: `/${i++}` } })
+    }
+  })
+}
+
 export default defineConfig({
   title: "CodeArtist - 码匠",
   titleTemplate: ":title",
@@ -10,11 +28,10 @@ export default defineConfig({
   lang: "zh-CN",
   head: [['link', { rel: 'icon', href: '/icons/logo.svg' }]],
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     logo: '/icons/logo.svg',
-    outline: { label: '目录', level: [2, 3] },
+    outline: { label: '页面导航', level: [2, 3] },
     editLink: {
-      text: '',
+      text: '在GitHub上编辑此页面',
       pattern: 'https://github.com/ArtistOfCode/artistofcode.github.com'
     },
     nav: [
@@ -84,31 +101,7 @@ export default defineConfig({
     ],
 
     sidebar: {
-      '/spring': [
-        {
-          text: '基础核心技术', base: '/spring', items: [
-            { text: '1. Spring模块与应用场景', link: '/1' },
-            { text: '2. 基于XML配置的容器', link: '/2' },
-            { text: '3. 基于注解配置的容器', link: '/3' },
-            { text: '4. 基于Java配置的容器', link: '/4' },
-            { text: '5. 三种方式的混合和迁移', link: '/5' },
-            { text: '6. 同类型多个Bean的注入', link: '/6' },
-            { text: '7. 环境抽象', link: '/7' },
-            { text: '8. 事件机制', link: '/8' },
-            { text: '9. 资源管理', link: '/9' },
-            { text: '10. 数据验证', link: '/10' },
-            { text: '11. 数据绑定', link: '/11' },
-            { text: '12. 类型转换', link: '/12' },
-            { text: '13. SpEL表达式', link: '/13' },
-          ]
-        },
-        { text: '面向切面编程', items: [] },
-        { text: '数据访问和事务管理', items: [] },
-        { text: 'Web Servlet应用', items: [] },
-        { text: 'Web Reactive应用', items: [] },
-        { text: '单元测试和集成测试', items: [] },
-        { text: '其他组件', items: [] },
-      ]
+      '/spring': sideMenu('/spring', spring)
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/ArtistOfCode' },
@@ -118,6 +111,7 @@ export default defineConfig({
       copyright: 'Copyright © 2017-present CodeArtist'
     },
     outlineTitle: '目录',
+    sidebarMenuLabel: '目录',
     darkModeSwitchLabel: '主题',
     returnToTopLabel: '返回顶部',
     docFooter: { prev: '上一页', next: '下一页' },

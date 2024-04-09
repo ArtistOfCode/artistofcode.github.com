@@ -1,7 +1,7 @@
 <template>
     <Layout>
         <template #doc-footer-before>
-            <img :src="isDark ? '/images/footer_dark.png' : '/images/footer.png'" alt="footer" loading="lazy"
+            <img :src="isDark ? '/images/wechat_dark.png' : '/images/wechat.png'" alt="wechat" loading="lazy"
                 style="margin-bottom:64px;" />
         </template>
     </Layout>
