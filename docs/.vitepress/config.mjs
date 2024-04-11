@@ -8,7 +8,7 @@ const spring = [
   { 'Web Servlet应用': [] },
   { 'Web Reactive应用': [] },
   { '单元测试和集成测试': [] },
-  { '其他组件': [] },
+  { '整合其他组件': [] },
 ]
 
 function sideMenu(base, v) {
@@ -140,6 +140,16 @@ export default defineConfig({
     },
   },
   markdown: {
-    image: { lazyLoading: true }
+    image: { lazyLoading: true },
+    container: {
+      infoLabel: '信息',
+      noteLabel: '信息',
+      tipLabel: '提示',
+      importantLabel: '重要',
+      warningLabel: '警告',
+      detailsLabel: '详细信息',
+      cautionLabel: '危险',
+      dangerLabel: '危险',
+    }
   }
 })

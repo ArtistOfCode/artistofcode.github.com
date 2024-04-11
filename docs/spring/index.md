@@ -72,4 +72,4 @@
 4. Further Resources
 ```
 
-## 其他组件
+## 整合其他组件
