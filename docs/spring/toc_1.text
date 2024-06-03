@@ -1,0 +1,268 @@
+目录：
+1. The IoC Container
+ ├─1.1. Introduction to the Spring IoC Container and Beans
+ ├─1.2. Container Overview
+ │  ├─1.2.1. Configuration Metadata
+ │  ├─1.2.2. Instantiating a Container
+ │  │  ├─Instantiation with a Constructor
+ │  │  ├─Instantiation with a Static Factory Method
+ │  │  ├─Instantiation by Using an Instance Factory Method
+ │  │  └─Determining a Bean’s Runtime Type
+ │  └─1.2.3. Using the Container
+ ├─1.3. Bean Overview
+ │  ├─1.3.1. Naming Beans
+ │  └─1.3.2. Instantiating Beans
+ ├─1.4. Dependencies
+ │  ├─1.4.1. Dependency Injection
+ │  │  ├─Constructor-based Dependency Injection
+ │  │  ├─Setter-based Dependency Injection
+ │  │  ├─Dependency Resolution Process
+ │  │  └─Examples of Dependency Injection
+ │  ├─1.4.2. Dependencies and Configuration in Detail
+ │  │  ├─Straight Values (Primitives, Strings, and so on)
+ │  │  ├─References to Other Beans (Collaborators)
+ │  │  ├─Inner Beans
+ │  │  ├─Collections
+ │  │  ├─Null and Empty String Values
+ │  │  ├─XML Shortcut with the p-namespace
+ │  │  ├─XML Shortcut with the c-namespace
+ │  │  └─Compound Property Names
+ │  ├─1.4.3. Using depends-on
+ │  ├─1.4.4. Lazy-initialized Beans
+ │  ├─1.4.5. Autowiring Collaborators
+ │  │  ├─Limitations and Disadvantages of Autowiring
+ │  │  └─Excluding a Bean from Autowiring
+ │  └─1.4.6. Method Injection
+ │     ├─Lookup Method Injection
+ │     └─Arbitrary Method Replacement
+ ├─1.5. Bean Scopes
+ │  ├─1.5.1. The Singleton Scope
+ │  ├─1.5.2. The Prototype Scope
+ │  ├─1.5.3. Singleton Beans with Prototype-bean Dependencies
+ │  ├─1.5.4. Request, Session, Application, and WebSocket Scopes
+ │  │  ├─Initial Web Configuration
+ │  │  ├─Request scope
+ │  │  ├─Session Scope
+ │  │  ├─Application Scope
+ │  │  ├─WebSocket Scope
+ │  │  └─Scoped Beans as Dependencies
+ │  └─1.5.5. Custom Scopes
+ │     ├─Creating a Custom Scope
+ │     └─Using a Custom Scope
+ ├─1.6. Customizing the Nature of a Bean
+ │  ├─1.6.1. Lifecycle Callbacks
+ │  │  ├─Initialization Callbacks
+ │  │  ├─Destruction Callbacks
+ │  │  ├─Default Initialization and Destroy Methods
+ │  │  ├─Combining Lifecycle Mechanisms
+ │  │  ├─Startup and Shutdown Callbacks
+ │  │  └─Shutting Down the Spring IoC Container Gracefully in Non-Web Applications
+ │  ├─1.6.2. ApplicationContextAware and BeanNameAware
+ │  └─1.6.3. Other Aware Interfaces
+ ├─1.7. Bean Definition Inheritance
+ ├─1.8. Container Extension Points
+ │  ├─1.8.1. Customizing Beans by Using a BeanPostProcessor
+ │  │  ├─Example: Hello World, BeanPostProcessor-style
+ │  │  └─Example: The AutowiredAnnotationBeanPostProcessor
+ │  ├─1.8.2. Customizing Configuration Metadata with a BeanFactoryPostProcessor
+ │  │  ├─Example: The Class Name Substitution PropertySourcesPlaceholderConfigurer
+ │  │  └─Example: The PropertyOverrideConfigurer
+ │  └─1.8.3. Customizing Instantiation Logic with a FactoryBean
+ ├─1.9. Annotation-based Container Configuration
+ │  ├─1.9.1. @Required
+ │  ├─1.9.2. Using @Autowired
+ │  ├─1.9.3. Fine-tuning Annotation-based Autowiring with @Primary
+ │  ├─1.9.4. Fine-tuning Annotation-based Autowiring with Qualifiers
+ │  ├─1.9.5. Using Generics as Autowiring Qualifiers
+ │  ├─1.9.6. Using CustomAutowireConfigurer
+ │  ├─1.9.7. Injection with @Resource
+ │  ├─1.9.8. Using @Value
+ │  └─1.9.9. Using @PostConstruct and @PreDestroy
+ ├─1.10. Classpath Scanning and Managed Components
+ │  ├─1.10.1. @Component and Further Stereotype Annotations
+ │  ├─1.10.2. Using Meta-annotations and Composed Annotations
+ │  ├─1.10.3. Automatically Detecting Classes and Registering Bean Definitions
+ │  ├─1.10.4. Using Filters to Customize Scanning
+ │  ├─1.10.5. Defining Bean Metadata within Components
+ │  ├─1.10.6. Naming Autodetected Components
+ │  ├─1.10.7. Providing a Scope for Autodetected Components
+ │  ├─1.10.8. Providing Qualifier Metadata with Annotations
+ │  └─1.10.9. Generating an Index of Candidate Components
+ ├─1.11. Using JSR 330 Standard Annotations
+ │  ├─1.11.1. Dependency Injection with @Inject and @Named
+ │  ├─1.11.2. @Named and @ManagedBean: Standard Equivalents to the @Component Annotation
+ │  └─1.11.3. Limitations of JSR-330 Standard Annotations
+ ├─1.12. Java-based Container Configuration
+ │  ├─1.12.1. Basic Concepts: @Bean and @Configuration
+ │  ├─1.12.2. Instantiating the Spring Container by Using AnnotationConfigApplicationContext
+ │  │  ├─Simple Construction
+ │  │  ├─Building the Container Programmatically by Using register(Class<?>…​)
+ │  │  ├─Enabling Component Scanning with scan(String…​)
+ │  │  └─Support for Web Applications with AnnotationConfigWebApplicationContext
+ │  ├─1.12.3. Using the @Bean Annotation
+ │  │  ├─Declaring a Bean
+ │  │  ├─Bean Dependencies
+ │  │  ├─Receiving Lifecycle Callbacks
+ │  │  ├─Specifying Bean Scope
+ │  │  ├─Customizing Bean Naming
+ │  │  ├─Bean Aliasing
+ │  │  └─Bean Description
+ │  ├─1.12.4. Using the @Configuration annotation
+ │  │  ├─Injecting Inter-bean Dependencies
+ │  │  ├─Lookup Method Injection
+ │  │  └─Further Information About How Java-based Configuration Works Internally
+ │  └─1.12.5. Composing Java-based Configurations
+ │     ├─Using the @Import Annotation
+ │     ├─Conditionally Include @Configuration Classes or @Bean Methods
+ │     └─Combining Java and XML Configuration
+ ├─1.13. Environment Abstraction
+ │  ├─1.13.1. Bean Definition Profiles
+ │  │  ├─Using @Profile
+ │  │  ├─XML Bean Definition Profiles
+ │  │  ├─Activating a Profile
+ │  │  └─Default Profile
+ │  ├─1.13.2. PropertySource Abstraction
+ │  ├─1.13.3. Using @PropertySource
+ │  └─1.13.4. Placeholder Resolution in Statements
+ ├─1.14. Registering a LoadTimeWeaver
+ ├─1.15. Additional Capabilities of the ApplicationContext
+ │  ├─1.15.1. Internationalization using MessageSource
+ │  ├─1.15.2. Standard and Custom Events
+ │  │  ├─Annotation-based Event Listeners
+ │  │  ├─Asynchronous Listeners
+ │  │  ├─Ordering Listeners
+ │  │  └─Generic Events
+ │  ├─1.15.3. Convenient Access to Low-level Resources
+ │  ├─1.15.4. Application Startup Tracking
+ │  ├─1.15.5. Convenient ApplicationContext Instantiation for Web Applications
+ │  └─1.15.6. Deploying a Spring ApplicationContext as a Java EE RAR File
+ └─1.16. The BeanFactory API
+    └─1.16.1. BeanFactory or ApplicationContext?
+
+
+整理目录：
+1. The IoC Container
+ ├─1.1. Introduction to the Spring IoC Container and Beans
+ ├─1.2. Container Overview
+ │  ├─1.2.1. Configuration Metadata
+ │  ├─1.2.2. Instantiating a Container
+ │  │  ├─Instantiation with a Constructor
+ │  │  ├─Instantiation with a Static Factory Method
+ │  │  ├─Instantiation by Using an Instance Factory Method
+ │  │  └─Determining a Bean’s Runtime Type
+ │  └─1.2.3. Using the Container
+ ├─1.3. Bean Overview
+ │  ├─1.3.1. Naming Beans
+ │  └─1.3.2. Instantiating Beans
+ ├─1.4. Dependencies
+ │  ├─1.4.1. Dependency Injection
+ │  │  ├─Constructor-based Dependency Injection
+ │  │  ├─Setter-based Dependency Injection
+ │  │  ├─Dependency Resolution Process
+ │  │  └─Examples of Dependency Injection
+ │  ├─1.4.3. Using depends-on
+ │  ├─1.4.4. Lazy-initialized Beans
+ │  └─1.4.5. Autowiring Collaborators
+ ├─1.5. Bean Scopes
+ │  ├─1.5.1. The Singleton Scope
+ │  ├─1.5.2. The Prototype Scope
+ │  ├─1.5.3. Singleton Beans with Prototype-bean Dependencies
+ │  ├─1.5.4. Request, Session, Application, and WebSocket Scopes
+ │  │  ├─Initial Web Configuration
+ │  │  ├─Request scope
+ │  │  ├─Session Scope
+ │  │  ├─Application Scope
+ │  │  ├─WebSocket Scope
+ │  │  └─Scoped Beans as Dependencies
+ │  └─1.5.5. Custom Scopes
+ │     ├─Creating a Custom Scope
+ │     └─Using a Custom Scope
+ ├─1.9. Annotation-based Container Configuration
+ │  ├─1.9.1. @Required
+ │  ├─1.9.2. Using @Autowired
+ │  ├─1.9.3. Fine-tuning Annotation-based Autowiring with @Primary
+ │  ├─1.9.4. Fine-tuning Annotation-based Autowiring with Qualifiers
+ │  ├─1.9.5. Using Generics as Autowiring Qualifiers
+ │  ├─1.9.6. Using CustomAutowireConfigurer
+ │  ├─1.9.7. Injection with @Resource
+ │  ├─1.9.8. Using @Value
+ │  └─1.9.9. Using @PostConstruct and @PreDestroy
+ ├─1.10. Classpath Scanning and Managed Components
+ │  ├─1.10.1. @Component and Further Stereotype Annotations
+ │  ├─1.10.2. Using Meta-annotations and Composed Annotations
+ │  ├─1.10.3. Automatically Detecting Classes and Registering Bean Definitions
+ │  ├─1.10.4. Using Filters to Customize Scanning
+ │  ├─1.10.5. Defining Bean Metadata within Components
+ │  ├─1.10.6. Naming Autodetected Components
+ │  ├─1.10.7. Providing a Scope for Autodetected Components
+ │  ├─1.10.8. Providing Qualifier Metadata with Annotations
+ │  └─1.10.9. Generating an Index of Candidate Components
+ ├─1.11. Using JSR 330 Standard Annotations
+ │  ├─1.11.1. Dependency Injection with @Inject and @Named
+ │  ├─1.11.2. @Named and @ManagedBean: Standard Equivalents to the @Component Annotation
+ │  └─1.11.3. Limitations of JSR-330 Standard Annotations
+ ├─1.12. Java-based Container Configuration
+ │  ├─1.12.1. Basic Concepts: @Bean and @Configuration
+ │  ├─1.12.2. Instantiating the Spring Container by Using AnnotationConfigApplicationContext
+ │  │  ├─Simple Construction
+ │  │  ├─Building the Container Programmatically by Using register(Class<?>…​)
+ │  │  ├─Enabling Component Scanning with scan(String…​)
+ │  │  └─Support for Web Applications with AnnotationConfigWebApplicationContext
+ │  ├─1.12.3. Using the @Bean Annotation
+ │  │  ├─Declaring a Bean
+ │  │  ├─Bean Dependencies
+ │  │  ├─Receiving Lifecycle Callbacks
+ │  │  ├─Specifying Bean Scope
+ │  │  ├─Customizing Bean Naming
+ │  │  ├─Bean Aliasing
+ │  │  └─Bean Description
+ │  ├─1.12.4. Using the @Configuration annotation
+ │  │  ├─Injecting Inter-bean Dependencies
+ │  │  ├─Lookup Method Injection
+ │  │  └─Further Information About How Java-based Configuration Works Internally
+ │  └─1.12.5. Composing Java-based Configurations
+ │     ├─Using the @Import Annotation
+ │     ├─Conditionally Include @Configuration Classes or @Bean Methods
+ │     └─Combining Java and XML Configuration
+ ├─1.13. Environment Abstraction
+ │  ├─1.13.1. Bean Definition Profiles
+ │  │  ├─Using @Profile
+ │  │  ├─XML Bean Definition Profiles
+ │  │  ├─Activating a Profile
+ │  │  └─Default Profile
+ │  ├─1.13.2. PropertySource Abstraction
+ │  ├─1.13.3. Using @PropertySource
+ │  └─1.13.4. Placeholder Resolution in Statements
+ ├─1.15. Additional Capabilities of the ApplicationContext
+ │  ├─1.15.1. Internationalization using MessageSource
+ │  ├─1.15.2. Standard and Custom Events
+ │  │  ├─Annotation-based Event Listeners
+ │  │  ├─Asynchronous Listeners
+ │  │  ├─Ordering Listeners
+ │  │  └─Generic Events
+ │  ├─1.15.3. Convenient Access to Low-level Resources
+ │  ├─1.15.4. Application Startup Tracking
+ │  ├─1.15.5. Convenient ApplicationContext Instantiation for Web Applications
+ │  └─1.15.6. Deploying a Spring ApplicationContext as a Java EE RAR File
+ └─1.16. The BeanFactory API
+    └─1.16.1. BeanFactory or ApplicationContext?
+
+1. The IoC Container
+ ├─1.6. Customizing the Nature of a Bean
+ │  ├─1.6.1. Lifecycle Callbacks
+ │  │  ├─Initialization Callbacks
+ │  │  ├─Destruction Callbacks
+ │  │  ├─Default Initialization and Destroy Methods
+ │  │  ├─Combining Lifecycle Mechanisms
+ │  │  ├─Startup and Shutdown Callbacks
+ │  │  └─Shutting Down the Spring IoC Container Gracefully in Non-Web Applications
+ │  ├─1.6.2. ApplicationContextAware and BeanNameAware
+ │  └─1.6.3. Other Aware Interfaces
+ ├─1.8. Container Extension Points
+ │  ├─1.8.1. Customizing Beans by Using a BeanPostProcessor
+ │  │  ├─Example: Hello World, BeanPostProcessor-style
+ │  │  └─Example: The AutowiredAnnotationBeanPostProcessor
+ │  ├─1.8.2. Customizing Configuration Metadata with a BeanFactoryPostProcessor
+ │  │  ├─Example: The Class Name Substitution PropertySourcesPlaceholderConfigurer
+ │  │  └─Example: The PropertyOverrideConfigurer
+ │  └─1.8.3. Customizing Instantiation Logic with a FactoryBean
