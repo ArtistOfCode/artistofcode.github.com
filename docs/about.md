@@ -1,3 +1,7 @@
+---
+gitChangelog: false
+---
+
 # 关于我们
 码匠（Code Artist）开源工作组初始于2017年，由几个志同道合的小伙伴创立于餐桌之上，只为将自己的兴趣爱好和更有意义的事结合起来。码匠的由来，正是古时的匠人对工艺抱有执着、专业、敬畏的心，程序员对技术也应如此，我们不是码农，而是码匠，编码的匠人，程序的艺术家。
 
@@ -9,5 +13,4 @@
 
 如要加入技术交流群，公众号回复“QQ”或“微信”，可以得到管理员联系方式。
 
-# 反馈
-- [Github Issues](https://github.com/ArtistOfCode/artistofcode.github.com/issues)
+<WeChat />

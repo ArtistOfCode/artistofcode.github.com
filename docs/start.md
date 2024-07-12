@@ -28,5 +28,6 @@ features:
       src: /icons/mybatisplus.svg
     title: MyBatis Plus
     details: MyBatisPlus高效实践，包括代码生成、增强查询等
+gitChangelog: false
 ---
 
