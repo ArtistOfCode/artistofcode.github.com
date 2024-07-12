@@ -21,7 +21,9 @@ const mybatis = [
 ]
 
 const nginx = [
-    { '基础': ['源码编译安装Nginx'] }
+    { '基础配置': ['源码编译安装Nginx'] },
+    { '使用示例': [] },
+    { '常用模块': [] },
 ]
 
 const tools = [
