@@ -1,6 +1,3 @@
-import { GitChangelog, GitChangelogMarkdownSection } from '@nolebase/vitepress-plugin-git-changelog/vite'
-// import { PageProperties, PagePropertiesMarkdownSection } from '@nolebase/vitepress-plugin-page-properties/vite'
-
 import { defineConfig } from 'vitepress'
 import nav from './config/nav'
 import sidebar from './config/sidebar'
@@ -11,14 +8,6 @@ export default defineConfig({
   description: "CodeArtist Docs",
   lang: "zh-CN",
   head: [['link', { rel: 'icon', href: '/icons/logo.svg' }]],
-  vite: {
-    plugins: [
-      GitChangelog({ repoURL: () => 'https://github.com/ArtistOfCode/artistofcode.github.com' }),
-      GitChangelogMarkdownSection(),
-      // PageProperties(),
-      // PagePropertiesMarkdownSection(),
-    ]
-  },
   themeConfig: {
     nav,
     sidebar,

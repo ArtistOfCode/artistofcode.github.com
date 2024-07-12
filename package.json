@@ -6,8 +6,6 @@
   },
   "devDependencies": {
     "@giscus/vue": "^3.0.0",
-    "@nolebase/vitepress-plugin-git-changelog": "^2.2.2",
-    "@nolebase/vitepress-plugin-page-properties": "^2.2.2",
     "vitepress": "^1.1.0"
   }
 }
