@@ -21,9 +21,9 @@ const mybatis = [
 ]
 
 const nginx = [
-    { '基础配置': ['源码编译安装Nginx'] },
-    { '使用示例': [] },
-    { '常用模块': [] },
+    { '基础原理': ['编译源码安装', '详解配置文件', '连接处理方式', '正向代理和反向代理'] },
+    { '使用示例': ['静态资源代理', 'HTTP反向代理', 'HTTPS反向代理', 'TCP/UDP反向代理', '负载均衡', '防盗链'] },
+    { '常用模块': ['HTTP Core模块', 'HTTP Proxy模块', 'HTTP Upstream模块', 'HTTP Stream Core模块', 'HTTP Stream Proxy模块', 'HTTP Stream Upstream模块', 'HTTP Rewrite模块', 'HTTP Access模块', 'HTTP Gzip模块', 'HTTP SSL模块'] },
 ]
 
 const tools = [
