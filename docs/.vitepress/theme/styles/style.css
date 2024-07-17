@@ -132,3 +132,7 @@
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
+
+.vp-doc table {
+  white-space: nowrap;
+}
