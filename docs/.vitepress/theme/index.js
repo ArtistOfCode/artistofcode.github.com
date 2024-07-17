@@ -4,6 +4,7 @@ import DocFooter from './components/DocFooter.vue'
 import Giscus from './components/Giscus.vue'
 import WeChat from './components/WeChat.vue'
 import './styles/custom.css'
+import './styles/style.css'
 
 export default {
     extends: DefaultTheme,
