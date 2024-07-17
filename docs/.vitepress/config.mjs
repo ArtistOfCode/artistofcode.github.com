@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
 import nav from './config/nav'
 import sidebar from './config/sidebar'
 
@@ -55,6 +56,9 @@ export default defineConfig({
     },
   },
   markdown: {
+    config(md) {
+      md.use(tabsMarkdownPlugin)
+    },
     image: { lazyLoading: true },
     container: {
       infoLabel: '信息',
