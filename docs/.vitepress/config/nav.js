@@ -1,5 +1,6 @@
 export default [
     { text: 'Spring', link: '/spring/' },
+    { text: 'SpringCloud', link: '/springcloud/' },
     { text: 'MyBatis', link: '/mybatis/' },
     { text: 'Nginx', link: '/nginx/' },
     { text: '工具', link: '/tools/' },

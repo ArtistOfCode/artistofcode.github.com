@@ -15,6 +15,12 @@ const spring = [
     { '整合其他组件': [] },
 ]
 
+const springcloud = [
+    { '基础框架': ['Spring Cloud基础框架'] },
+    { '常用组件': ['Spring Cloud Context', 'Spring Cloud Gateway', 'Spring Cloud OpenFeign', 'Spring Cloud LoadBalancer', 'Spring Cloud Circuit Breaker', 'Spring Cloud Sleuth'] },
+    { '其他组件': ['Spring Cloud Consul', 'Spring Cloud Vault'] },
+]
+
 const mybatis = [
     { '基础核心': ['介绍与配置', '增删改查', '结果映射', '动态语句'] },
     { '扩展开发': ['类型处理器', '插件'] },
@@ -43,8 +49,9 @@ function sideMenu(base, v) {
 }
 
 export default {
-    '/spring': sideMenu('/spring', spring),
-    '/mybatis': sideMenu('/mybatis', mybatis),
-    '/nginx': sideMenu('/nginx', nginx),
-    '/tools': sideMenu('/tools', tools),
+    '/spring/': sideMenu('/spring', spring),
+    '/springcloud/': sideMenu('/springcloud', springcloud),
+    '/mybatis/': sideMenu('/mybatis', mybatis),
+    '/nginx/': sideMenu('/nginx', nginx),
+    '/tools/': sideMenu('/tools', tools),
 }
