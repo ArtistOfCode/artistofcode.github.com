@@ -8,7 +8,10 @@ export default defineConfig({
   titleTemplate: ":title",
   description: "CodeArtist Docs",
   lang: "zh-CN",
-  head: [['link', { rel: 'icon', href: '/icons/logo.svg' }]],
+  head: [
+    ['link', { rel: 'icon', href: '/icons/logo.svg' }],
+    ['script', {}, `var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?f0ecbd29a75895a987c3708f40d4093e";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();`]
+  ],
   themeConfig: {
     nav,
     sidebar,
